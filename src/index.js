@@ -11,3 +11,4 @@ const root = ReactDOM.createRoot(noDOM);
 // 3. React sakne rendere pirmo komponenti (App)
 root.render(<App />);
 
+
