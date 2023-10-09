@@ -1,22 +1,32 @@
 import Diena from './Diena';
-import Stunda from './Stunda';
+
+
 
 function App() {
-  const PirmdienasStundas = ["Sports", "Dabaszinības", "Vēsture", "Krievu Valoda"];
-    const OtrdienasStundas = ["Matemātika", "Datortīkli", "Dabaszinības", "Matemātika"];
-     const TresdienasStundas = ["Programmēšana", "Programmēšana", "Datortīkli", "Datortīkli"];
-      const CeturdienasStundas = ["Klases Strunda", "Latviešu valoda", "Sports", "Vēsture"];
-       const PiektdienasStundas = ["Fizika", "Programmēšana", "Angļu valoda"];
-  return (
+
+       const visasStundas = [
+
+        {diena: "Pirmdiena", stundas: ["Sports", "Dabaszinības", "Vēsture", "Krievu Valoda"]},
+         
+        {diena: "Otrdiena", stundas: ["Matemātika", "Datortīkli", "Dabaszinības", "Matemātika"]},
+        
+        {diena: "Tresdiena", stundas: ["Programmēšana", "Programmēšana", "Datortīkli", "Datortīkli"]},
+
+        {diena: "Ceturdiena", stundas: ["Klases Strunda", "Latviešu valoda", "Sports", "Vēsture"]},
+
+        {diena: "Piektdiena", stundas: ["Fizika", "Programmēšana", "Angļu valoda"]}
+
+       ];
+
+       const dienasJSX = visasStundas.map((diena, index) => {
+         return <Diena key={index} diena={diena.diena} stundas={diena.stundas}/>
+       });
+       
+return (
     <>
       <h1>Te būs stundu saraksts! :)</h1>
-      <Diena diena="Pirmdiena" stundas={PirmdienasStundas}/>
-      <Diena diena="Otrdiena" stundas={OtrdienasStundas}/>
-      <Diena diena="Trešdiena" stundas={TresdienasStundas}/>
-      <Diena diena="Ceturdiena" stundas={CeturdienasStundas}/>
-      <Diena diena="Piektdiena" stundas={PiektdienasStundas}/>
+      {dienasJSX}
     </>
   )
 }
-
 export default App;
