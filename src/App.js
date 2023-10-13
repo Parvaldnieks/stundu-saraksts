@@ -1,5 +1,5 @@
 import Diena from './Diena';
-
+import "./global.css";
 
 
 function App() {

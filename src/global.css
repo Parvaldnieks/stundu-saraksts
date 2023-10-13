@@ -1,0 +1,10 @@
+:root {
+    font-family: sans-serif;
+}
+li {
+    list-style: none;
+}
+table, th, td {
+    border: 1px;
+    color: red;
+}
